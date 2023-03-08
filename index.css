@@ -51,11 +51,11 @@ table {
 /* Desktop */
 html {
     scroll-behavior: smooth;
-    min-width: 960px;
+    width: auto;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px 0 20px;
-    display: block;
+    border: 10px;
 }
 .container {
     max-width: 920px;
@@ -66,12 +66,14 @@ html {
 .logo {
     width: 80px;
     height: 80px;
+    align-items: center;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 10px;
+    flex: 1 0 auto;
 }
 .menu-item {
     background-color: black;
@@ -311,7 +313,7 @@ optgroup, option {
 /* Mobile */
 @media only screen and (max-width: 600px) {
     html {
-        padding: 1%;
+        padding: 20px 20px 20px 0;
     }
     .container {
         max-width: 98%;
