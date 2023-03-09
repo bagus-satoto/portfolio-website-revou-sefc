@@ -50,15 +50,13 @@ table {
 
 /* Desktop */
 html {
+    max-width: 920px;
     scroll-behavior: smooth;
     width: auto;
-    width: 100%;
     margin: 0 auto;
-    padding: 0 20px 0 20px;
     border: 10px;
 }
 .container {
-    max-width: 920px;
     width: 100%;
     margin: 0 auto;
     display: block;
@@ -107,6 +105,7 @@ html {
     display: flex;
     gap: 40px;
     justify-content: center;
+    padding: 20px;
 }
 
 .about {
@@ -311,15 +310,12 @@ optgroup, option {
 }
 
 /* Mobile */
-@media only screen and (max-width: 600px) {
-    html {
-        padding: 20px 20px 20px 0;
-    }
+@media only screen and (max-width: 900px) {
     .container {
-        max-width: 98%;
+        max-width: 100%;
     }
     .navbar {
-        max-width: 98%;
+        max-width: 100%;
         display: block;
         flex-direction: column;
         text-align: center;
@@ -328,13 +324,11 @@ optgroup, option {
         margin-bottom: 15px;
     }
     .menu-item {
-        width: 100%;
         display: block;
         background-color: black;
         color: white;
         border: 1px solid black;
         border-radius: 0px;
-        padding: 4px 10px;
         margin: 1px 0 1px 0;
         cursor: pointer;
         text-decoration: none;
@@ -354,7 +348,6 @@ optgroup, option {
         align-items: center;
     }
     .about-information {
-        text-align: center;
         align-items: center;
         justify-content: center;
     }
