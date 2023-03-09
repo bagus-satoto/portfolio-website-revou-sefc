@@ -105,7 +105,6 @@ html {
     display: flex;
     gap: 40px;
     justify-content: center;
-    padding: 20px;
 }
 
 .about {
@@ -311,8 +310,8 @@ optgroup, option {
 
 /* Mobile */
 @media only screen and (max-width: 900px) {
-    .container {
-        max-width: 100%;
+    html {
+        padding: 20px;
     }
     .navbar {
         max-width: 100%;
