@@ -378,9 +378,19 @@ optgroup, option {
         margin: 1px 0 1px 0;
         cursor: pointer;
         text-decoration: none;
+        font-size: 14px;
     }
     .home-title {
         text-align: center;
+        padding: 30px 30px 80px 30px;
+    }
+    .home-title > h1 {
+        font-size: 45px;
+        font-weight: 700;
+    }
+    .home-title > h6 {
+        font-size: 15px;
+        color: gray;
     }
     .about-contact {
         width: 100%;
