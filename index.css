@@ -131,9 +131,9 @@ html {
     background-color: whitesmoke;
     border: 1px solid darkgray;
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
     color: gray;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
 }
 .content-caption > p {
@@ -380,6 +380,7 @@ optgroup, option {
         text-decoration: none;
         font-size: 14px;
     }
+    /* Home */
     .home-title {
         text-align: center;
         padding: 30px 30px 80px 30px;
@@ -392,6 +393,17 @@ optgroup, option {
         font-size: 15px;
         color: gray;
     }
+    
+    .slide > button {
+        background-color: whitesmoke;
+        border: 1px solid darkgray;
+        border-radius: 8px;
+        padding: 0;
+        color: gray;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
     .about-contact {
         width: 100%;
         display: flex;
@@ -406,22 +418,57 @@ optgroup, option {
         display: block;
         align-items: center;
     }
+    .content-caption > p {
+        font-size: 14px;
+        font-style: italic;
+        color: gray;
+        margin-bottom: 20px;
+    }
+    .content-person {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .content-person > img {
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+    }
+    .person-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .person-info > h6 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .person-info > p {
+        font-style: italic;
+        font-size: 14px;
+        color: gray;
+        margin-top: 12px;
+    }
     .about-information {
         align-items: center;
         justify-content: center;
     }
-    .contact {
-        width: 100%;
-    }
+    
     .slide > button {
     background-color: whitesmoke;
     border: 1px solid darkgray;
     border-radius: 8px;
-    padding: 10px;
+    padding: 5px;
     color: gray;
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
     }
+
+    /* Contact Us Card */
+    .contact {
+        width: 100%;
+    }
+
+    /* Packages */
     .destination {
         display: flex;
         flex-direction: column;
@@ -450,7 +497,9 @@ optgroup, option {
         margin-bottom: 20px;
     }
 
+    /* Call Us */
     .call-us-title {
         text-align: center;
+        padding: 40px;
     }
 }
