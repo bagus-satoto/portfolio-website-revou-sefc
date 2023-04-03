@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Happy Travel</title>
+</head>
+
+<body style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+    <header style="border-bottom: 1px solid whitesmoke;">
+        <nav class="container">
+            <div class="navbar">
+                <img class="logo" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/travel-logo.jpg">
+                <div class="menu">
+                    <a class="menu-item" href="#home">Home</a>
+                    <a class="menu-item" href="#package">Our Package</a>
+                    <a class="menu-item" href="#call-us">Call Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home">
+            <div class="container">
+                <div class="home-title">
+                    <h1>Happy Travel</h1>
+                    <h6>Your Happiness, Our Happiness</h6>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <div class="about">
+                        <img class="about-img" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/bali.jpg">
+                        <img class="about-img" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/tokyo.jpg">
+                        <img class="about-img" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/seoul.jpg">
+                        <img class="about-img" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/berlin.jpg">
+                        <img class="about-img" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/paris.jpg">
+                        <img class="about-img" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/amsterdam.jpg">
+                        <div class="slide">
+                            <button onclick="plusDivs(-1)">←</button>
+                            <button onclick="plusDivs(1)">→</button>
+                        </div>
+
+                        <script>
+                            var slideIndex = 1;
+                            showDivs(slideIndex);
+
+                            function plusDivs(n) {
+                                showDivs((slideIndex += n));
+                            }
+
+                            function showDivs(n) {
+                                var n;
+                                var imgList = document.getElementsByClassName("about-img");
+                                if (n > imgList.length) slideIndex = 1;
+                                else if (n < 1) slideIndex = imgList.length;
+
+                                for (i = 0; i < imgList.length; i++) {
+                                    imgList[i].style.display = "none";
+                                }
+
+                                imgList[slideIndex - 1].style.display = 'block';
+                            }
+
+                            setInterval(() => {
+                                plusDivs(1);
+                            }, 5000)
+                        </script>
+
+                        <div class="about-content">
+                            <div class="content-caption">
+                                <p>"Traveling with Happy Travel makes me happy indeed."</p>
+                            </div>
+                            <div class="content-person">
+                                <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/traveler.jpg">
+                                <div class="person-info">
+                                    <h6>Alexandra</h6>
+                                    <p>Student, 24</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="about-information">
+                            <h6 class="information-title">Why Happy Travel?</h6>
+                            <ul class="information-list">
+                                <li>
+                                    <div class="list-number">1</div>
+                                    <p class="list-paragraph">
+                                        We provide ticketing services for trips 
+                                        from and to anywhere, around the world.
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="list-number">2</div>
+                                    <p class="list-paragraph">
+                                        We provide the best service for each of our customers.
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="list-number">3</div>
+                                    <p class="list-paragraph">
+                                        We are one of Asia's best travel suppliers.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Contact Us</h4>
+                                <p>We will contact you within 24 hours after receiving your input.</p>
+                            </div>
+
+                            <form id="contactUs" name="contactUs" onsubmit="return validateForm();">
+                                <div class="input">
+                                    <label for="name">Your Name:</label>
+                                    <input id="name" name="name" type="text" placeholder="First and last name" />
+                                </div>
+                                <div class="input">
+                                    <label for="email">Email Address:</label>
+                                    <input id="email" name="email" type="email" placeholder="example@mail.com" />
+                                </div>
+                                <div class="input">
+                                    <label for="interest">What are you interested in?</label>
+                                    <select id="interest" name="interest">
+                                        <option value="" disabled selected hidden>Select your option</option>
+                                        <optgroup label="Asia">
+                                            <option>Bali</option>
+                                            <option>Tokyo</option>
+                                            <option>Seoul</option>
+                                        </optgroup>
+                                        <optgroup label="Europe">
+                                            <option>Berlin</option>
+                                            <option>Paris</option>
+                                            <option>Amsterdam</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <input class="button" onclick="validateForm()" type="submit" value="SEND">
+                            </form>
+
+                            <script>
+                                function validateForm(contactUs) {
+                                    var name = document.forms["contactUs"]["name"].value;
+                                    var email = document.forms["contactUs"]["email"].value;
+                                    var interest = document.forms["contactUs"]["interest"].value;
+
+                                    if (name == "" || email == "" || interest == "") {
+                                        alert("Input required!");
+                                        return false;
+                                    }
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="package" style="border-bottom: 1px solid whitesmoke">
+            <div class="container">
+                <div class="package-title">
+                    <h2>Our Packages</h2>
+                </div>
+
+                <div class="destination">
+                    <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/plane.jpg">
+                    <div class="city">
+                        <h4>Bali</h4>
+                        <p>Indonesia's most popular travel destination</p>
+                    </div>
+                    <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/plane.jpg">
+                    <div class="city">
+                        <h4>Tokyo</h4>
+                        <p>One of Asia's most popular destination</p>
+                    </div>
+                    <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/plane.jpg">
+                    <div class="city">
+                        <h4>Seoul</h4>
+                        <p>The most popular package trip of ours to date</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="destination">
+                    <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/plane.jpg">
+                    <div class="city">
+                        <h4>Berlin</h4>
+                        <p>Known for its crazy nightlife and vibrant culture</p>
+                    </div>
+                    <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/plane.jpg">
+                    <div class="city">
+                        <h4>Paris</h4>
+                        <p>One of the most romantic and best cities in Europe</p>
+                    </div>
+                    <img src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/plane.jpg">
+                    <div class="city">
+                        <h4>Amsterdam</h4>
+                        <p>A city of heritage and culture</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="call-us" style="border-bottom: 1px solid whitesmoke">
+            <div class="container">
+                <div class="call-us-title">
+                    <h2>What are you waiting for?</h2>
+                    <p>Call us now, and we will be happy to help!</p>
+                </div>
+                <div class="book-now">
+                    <input class="button" type="submit" value="CALL US!">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <img class="logo" src="https://ciaoadiel.github.io/portfolio-website-revou-sefc/travel-logo.jpg">
+        <div class="web-info">
+            <p>Terms of Service</p>
+            <p>Privacy Policy</p>
+        </div>
+        <div class="web-info">
+            <p>© 2023</p>
+            <p>Happy Travel</p>
+        </div>
+    </footer>
+</body>
+</html>
