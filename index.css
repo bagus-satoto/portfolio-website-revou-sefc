@@ -209,7 +209,7 @@ li > div {
     color: gray;
 }
 
-/* Contact Us Card */
+/* Contact Us */
 .contact {
     width: 40%;
 }
@@ -463,7 +463,7 @@ optgroup, option {
     cursor: pointer;
     }
 
-    /* Contact Us Card */
+    /* Contact Us */
     .contact {
         width: 100%;
     }
